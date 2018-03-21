@@ -1,0 +1,25 @@
+body {
+    background-color: black !important;
+    font-family: Arial !important;
+}
+#name {
+    color : white;
+    font-style: italic;
+    font-size: large;
+
+
+}
+.navbar-inverse {
+    background-color: #545b62;
+}
+
+nav .container a {
+color: white;
+}
+
+nav .container a:hover {
+    text-decoration: none;
+    color: white ;
+    font-size: large;
+    font-style: oblique;
+}

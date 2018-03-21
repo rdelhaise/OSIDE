@@ -1,0 +1,27 @@
+.navbar-nav li a img {
+    margin-right: 10px; 
+}
+
+.font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar{
+    background-color: #252525;
+}
+
+.navbar a{
+    color: #d2d0d0;
+}
+
+.navbar a:hover{
+    color: #252525;
+}
+
+/* 
+Transformer tous les liens dans le fichier header.php pour simplifié et clean le code
+
+.accueil img {
+    content: url(/oside/assets/img/png/grey/brush.png);
+} 
+*/
