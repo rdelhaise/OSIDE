@@ -29,4 +29,24 @@ class DatabaseOside{
             }
             return $result;
     }
+
+    public function insertQuery($colones, $table, $data){
+        $chaine = '';
+        foreach ($data as $i => $value) {
+            $chaine .= '"'.$value.'",';
+            echo $chaine.'<br />';
+        }
+        $chaine .= ')';
+        $chaine = str_replace(",)", '',  $chaine);
+        $query = 'INSERT INTO '.$table.'('.$colones.') VALUES ('.$chaine.');';
+        $result = null ;
+        print_r($query);
+        try{
+            $insert = $this->db_connect->query($query);
+        }catch (mysqli_sql_exception  $exception) {
+            error_log($exception->getMessage());
+        }
+        $result = $insert;
+        return $result;
+    }
 }

@@ -22,7 +22,7 @@ class Auth extends CI_Controller
 
     public function login_process(){
 
-            $username = $this->input->post('username');
+            $username = $this->input->post('mail');
             $password = $this->input->post('password');
             error_log($username.' '.$password);
             $is_loggued = $this->session->get_userdata();
@@ -34,7 +34,7 @@ class Auth extends CI_Controller
                 } else {
 
                     try {
-                        $users = $this->DatabaseOside->selectQuery('id, username', 'auth', 'username="' . $username . '" AND password="' . $password . '"');
+                        $users = $this->DatabaseOside->selectQuery('id, email', 'auth', 'email="' . $username . '" AND password="' . $password . '"');
                         if ($users != FALSE) {
                             $data = array();
 
@@ -61,11 +61,39 @@ class Auth extends CI_Controller
                 $this->session->sess_destroy();
             }
     }
+
+    /**
+     * @return null
+     */
+    public function signInProcess(){
+        $name = $this->input->post('name');
+        $firstname = $this->input->post('firstname');
+        $email = $this->input->post('mail');
+        $password = $this->input->post('password');
+        $adress = $this->input->post('adress');
+        $city = $this->input->post('city');
+        $zip =  $this->input->post('zip');
+        $mobile = $this->input->post('mobile');
+        $tel =  $this->input->post('tel');
+        if(isset($name) or isset($firstname) or isset($email) or isset($password) or isset($mobile) ){
+            $data = array($name, $firstname, $email, $password, $adress, $city, $zip,  $mobile, $tel);
+            print_r($data);
+            $res = $this->DatabaseOside->insertQuery('name, firstname, email, password, adress, city, zip, mobile, tel', 'auth', $data);
+        }else{
+            print('NTM');
+        }
+    }
     public function disconnect(){
         $this->session->sess_destroy();
         $data['user'] =  FALSE;
         $this->load->view('header', $data);
         $this->load->view('acceuil');
+        $this->load->view('footer');
+    }
+
+    public function inscription(){
+        $this->load->view('header');
+        $this->load->view('inscription');
         $this->load->view('footer');
     }
 }

@@ -31,12 +31,12 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-left">
                 <li class="active font"><a href="#" class="accueil"><img src="<?php echo site_url(); ?>/assets/img/png/grey/brush.png" alt="Logo O.Side">Accueil</a></li>
-                <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/seche.png" alt="Logo O.Side">Informations</a></li>
                 <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/ciseau.png" alt="Logo O.Side">Tarifs</a></li>
                 <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/tube.png" alt="Logo O.Side">La revue</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/spray.png" alt="Logo O.Side">Prendre RDV</a></li>
+                <li class="font"><a href="http://www.coif.easyrendezvous.fr/head-givet"><img src="<?php echo site_url(); ?>assets/img/png/grey/spray.png" alt="Logo O.Side">Prendre RDV</a></li>
+                <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/seche.png" alt="Logo O.Side">Informations</a></li>
                 <li class="font"><a href="#"><img src="<?php echo site_url(); ?>assets/img/png/grey/barbier.png" alt="Logo O.Side">Contacts</a></li>
                 <li class="font"><a href="<?php echo site_url('/auth/disconnect');?>"><img src="<?php echo site_url(); ?>assets/img/png/grey/rasoir.png" alt="Logo O.Side">Se Déconnecter</a></li>
             </ul>
