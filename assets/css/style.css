@@ -1,25 +1,39 @@
-body {
-    background-color: black !important;
-    font-family: Arial !important;
-}
 #name {
     color : white;
     font-style: italic;
-    font-size: large;
-
-
+    font-size: large
 }
+
 .navbar-inverse {
     background-color: #545b62;
 }
 
-nav .container a {
-color: white;
+nav .nav-item a {
+    color: white;
 }
 
-nav .container a:hover {
+nav .nav-item a:hover {
     text-decoration: none;
     color: white ;
-    font-size: large;
-    font-style: oblique;
+}
+
+@media (max-width: 1000px) and (min-width: 768px){
+    .nav-item a{
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    .logomid {
+        content : url("/oside/assets/img/logo.jpg");
+        height: 70px;
+    }
+}
+
+.g {
+    padding-right: 0px;
+}
+
+.carousel-item img {
+    width: 100%;
 }
